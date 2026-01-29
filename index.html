@@ -304,6 +304,35 @@
             transform: translateY(-3px);
         }
 
+        /* ===== HERO BADGE ===== */
+        .hero-badge {
+            margin: 20px 0 30px;
+        }
+
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.25));
+            color: var(--primary-gold);
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        .live-badge i {
+            font-size: 1.1rem;
+        }
+
         /* ===== SECTIONS ===== */
         section {
             padding: 100px 0;
@@ -358,6 +387,140 @@
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 0.9rem;
+        }
+
+        /* ===== ACHIEVEMENTS SECTION ===== */
+        .achievements {
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(26, 26, 26, 0.9));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievements:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+        }
+
+        .achievements:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+        }
+
+        .achievement-card {
+            background: linear-gradient(145deg, rgba(212, 175, 55, 0.05), rgba(10, 10, 10, 0.8));
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            padding: 40px;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-gold);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+        }
+
+        .achievement-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-gold);
+        }
+
+        .achievement-icon {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-gold);
+            font-size: 2.5rem;
+        }
+
+        .achievement-content {
+            flex: 1;
+        }
+
+        .achievement-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary-gold);
+        }
+
+        .achievement-badge {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .badge-tag {
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.2));
+            color: var(--primary-gold);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .achievement-highlights {
+            margin: 25px 0;
+        }
+
+        .highlight {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .highlight i {
+            color: var(--primary-gold);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .highlight span {
+            color: var(--text-light);
+        }
+
+        .achievement-note {
+            background: rgba(212, 175, 55, 0.05);
+            border-left: 3px solid var(--primary-gold);
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .achievement-note i {
+            color: var(--primary-gold);
+            margin-top: 3px;
         }
 
         /* ===== EXPERIENCE ===== */
@@ -596,6 +759,26 @@
             .timeline-dot {
                 left: 12px;
             }
+            
+            .achievement-card {
+                flex-direction: column;
+                padding: 30px;
+            }
+            
+            .achievement-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+                align-self: center;
+            }
+            
+            .achievement-content h3 {
+                text-align: center;
+            }
+            
+            .achievement-badge {
+                justify-content: center;
+            }
         }
 
         @media (max-width: 768px) {
@@ -696,6 +879,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -715,6 +899,15 @@
                     web development, data analysis, and emerging AI technologies. Committed to leveraging 
                     technology for impactful solutions in Kisumu, Kenya, and beyond.
                 </p>
+                
+                <!-- HERO BADGE ADDED HERE -->
+                <div class="hero-badge fade-in">
+                    <span class="live-badge">
+                        <i class="fas fa-shield-alt"></i> 
+                        KE-CIRT/CC Acknowledged Security Researcher
+                    </span>
+                </div>
+                
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary fade-in">
                         <i class="fas fa-envelope"></i> Hire Me
@@ -812,8 +1005,59 @@
                         <span class="tag">DIP Development </span>
                         <span class="tag">Data Plan & Collection</span>
                         <span class="tag">Logframe Development</span>
-                        
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION ADDED HERE -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Recognition</h2>
+                <p>Contributions to national cybersecurity and ethical practices</p>
+            </div>
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="achievement-content">
+                    <h3>National Cybersecurity Contribution</h3>
+                    <div class="achievement-badge">
+                        <span class="badge-tag">KE-CIRT/CC Acknowledged</span>
+                        <span class="badge-tag">Responsible Disclosure</span>
+                        <span class="badge-tag">Ethical Research</span>
+                    </div>
+                    <p>
+                        Successfully identified and responsibly reported a critical security vulnerability in 
+                        national infrastructure through passive OSINT research. The finding was officially 
+                        acknowledged and resolved by Kenya's National Computer Incident Response Team (KE-CIRT/CC), 
+                        contributing to enhanced security of critical national assets.
+                    </p>
+                    <div class="achievement-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Passive, non-intrusive security research methodology</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Professional reporting through official KE-CIRT/CC channels</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Official confirmation of vulnerability remediation</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Demonstrated commitment to ethical cybersecurity practices</span>
+                        </div>
+                    </div>
+                    <p class="achievement-note">
+                        <i class="fas fa-info-circle"></i>
+                        This achievement demonstrates practical application of cybersecurity principles 
+                        with professional ethics and national security awareness.
+                    </p>
                 </div>
             </div>
         </div>
@@ -940,7 +1184,6 @@
                         <div>
                             <h3>Email</h3>
                             <p>stiriohaningtone630@gmail.com</p>
-                            
                         </div>
                     </div>
                     <div class="contact-item fade-in">
@@ -950,7 +1193,6 @@
                         <div>
                             <h3>LinkdIn</h3>
                             <p>https://bit.ly/Haningtone_LinkedIn</p>
-                            
                         </div>
                     </div>
                 </div>
