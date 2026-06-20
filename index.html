@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Ouma Haningtone | Technical VA | Security Researcher</title>
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Ouma Haningtone: Technical Virtual Assistant & Security Researcher. Bridging growth automation with data protection. Trusted by KE-CIRT/CC.">
-    <meta name="author" content="Ouma Haningtone">
-    <meta name="keywords" content="Technical VA, Security Research, Cybersecurity, HR Tech, Python Automation, Data Protection, Vulnerability Assessment, Nessus">
-    <meta name="robots" content="index, follow">
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Ouma Haningtone | Technical VA · Security Researcher</title>
+    <!-- SEO Meta -->
+    <meta name="description" content="Ouma Haningtone: Technical Virtual Assistant & Security Researcher. Bridging growth automation with data protection. Trusted by KE-CIRT/CC." />
+    <meta name="author" content="Ouma Haningtone" />
+    <meta name="keywords" content="Technical VA, Security Research, Cybersecurity, HR Tech, Python Automation, Data Protection, Vulnerability Assessment, Nessus" />
+    <meta name="robots" content="index, follow" />
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
     <style>
+        /* ── RESET & BASE ── */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         :root {
             --gold: #D4AF37;
             --gold-light: #F0C45A;
@@ -34,11 +38,9 @@
             --transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--dark);
@@ -46,17 +48,17 @@
             line-height: 1.55;
             overflow-x: hidden;
         }
-
         .container {
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 28px;
         }
-
-        h1, h2, h3, .logo {
+        h1,
+        h2,
+        h3,
+        .logo {
             font-family: 'Playfair Display', serif;
         }
-
         h1 {
             font-size: 3.8rem;
             line-height: 1.2;
@@ -67,7 +69,6 @@
             color: transparent;
             letter-spacing: -0.01em;
         }
-
         h2 {
             font-size: 2.5rem;
             font-weight: 600;
@@ -75,24 +76,20 @@
             color: var(--gold);
             letter-spacing: -0.02em;
         }
-
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
         }
-
         .section-title p {
             color: var(--gray-500);
             font-size: 1.1rem;
             max-width: 600px;
             margin: 0.5rem auto 0;
         }
-
         .section-title h2 {
             display: inline-block;
             position: relative;
         }
-
         .section-title h2:after {
             content: '';
             position: absolute;
@@ -103,7 +100,7 @@
             background: var(--gold);
             border-radius: 2px;
         }
-
+        /* ── NAV ── */
         nav {
             position: fixed;
             top: 0;
@@ -115,18 +112,15 @@
             transition: var(--transition);
             border-bottom: 1px solid rgba(212, 175, 55, 0.15);
         }
-
         nav.scrolled {
             padding: 12px 0;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
-
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
@@ -136,13 +130,11 @@
             align-items: center;
             gap: 8px;
         }
-
         .nav-links {
             display: flex;
             gap: 2rem;
             list-style: none;
         }
-
         .nav-links a {
             color: var(--gray-100);
             text-decoration: none;
@@ -150,11 +142,10 @@
             font-size: 0.95rem;
             transition: var(--transition);
         }
-
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--gold);
         }
-
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -163,24 +154,21 @@
             font-size: 1.6rem;
             cursor: pointer;
         }
-
+        /* ── HERO ── */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             padding: 120px 0 80px;
         }
-
         .hero-grid {
             display: flex;
             align-items: center;
             gap: 3rem;
         }
-
         .hero-content {
             flex: 1;
         }
-
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -195,20 +183,17 @@
             font-weight: 500;
             color: var(--gold);
         }
-
         .hero-description {
             font-size: 1.18rem;
             color: var(--gray-300);
             margin: 1.5rem 0 2rem;
             max-width: 550px;
         }
-
         .cta-group {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
         }
-
         .btn {
             padding: 12px 28px;
             border-radius: 40px;
@@ -223,35 +208,29 @@
             border: none;
             font-family: inherit;
         }
-
         .btn-primary {
             background: var(--gold);
             color: #0A0A0C;
         }
-
         .btn-primary:hover {
             background: var(--gold-light);
             transform: translateY(-3px);
             box-shadow: 0 12px 20px -8px rgba(212, 175, 55, 0.4);
         }
-
         .btn-secondary {
             background: transparent;
             border: 1.5px solid var(--gold);
             color: var(--gray-100);
         }
-
         .btn-secondary:hover {
             background: rgba(212, 175, 55, 0.1);
             transform: translateY(-3px);
         }
-
         .hero-image {
             flex: 1;
             display: flex;
             justify-content: center;
         }
-
         .profile-ring {
             width: 340px;
             height: 340px;
@@ -263,7 +242,6 @@
             position: relative;
             border: 2px solid var(--gold);
         }
-
         .profile-ring:after {
             content: '';
             position: absolute;
@@ -277,7 +255,6 @@
             mask-composite: exclude;
             pointer-events: none;
         }
-
         .profile-inner {
             width: 92%;
             height: 92%;
@@ -287,18 +264,16 @@
             align-items: center;
             justify-content: center;
         }
-
         .profile-inner i {
             font-size: 5rem;
             color: var(--gold);
         }
-
+        /* ── SKILLS ── */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.8rem;
         }
-
         .skill-card {
             background: var(--dark-card);
             padding: 1.8rem;
@@ -306,25 +281,21 @@
             border-left: 4px solid var(--gold);
             transition: var(--transition);
         }
-
         .skill-card:hover {
             transform: translateY(-6px);
             background: #17171F;
         }
-
         .skill-icon {
             font-size: 2.2rem;
             color: var(--gold);
             margin-bottom: 1.2rem;
         }
-
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             margin-top: 1rem;
         }
-
         .tag {
             background: rgba(212, 175, 55, 0.12);
             color: var(--gold);
@@ -333,7 +304,7 @@
             font-size: 0.75rem;
             font-weight: 500;
         }
-
+        /* ── ACHIEVEMENTS ── */
         .achievement-card {
             background: linear-gradient(135deg, #121218 0%, #0E0E12 100%);
             border-radius: 32px;
@@ -341,19 +312,16 @@
             border: 1px solid rgba(212, 175, 55, 0.25);
             transition: var(--transition);
         }
-
         .achievement-card:hover {
             transform: translateY(-5px);
             border-color: var(--gold);
         }
-
         .achievement-flex {
             display: flex;
             gap: 2rem;
             align-items: flex-start;
             flex-wrap: wrap;
         }
-
         .achievement-icon {
             background: rgba(212, 175, 55, 0.12);
             width: 80px;
@@ -365,18 +333,15 @@
             font-size: 2.4rem;
             color: var(--gold);
         }
-
         .achievement-stats {
             flex: 1;
         }
-
         .badge-list {
             display: flex;
             gap: 0.8rem;
             flex-wrap: wrap;
             margin: 1rem 0;
         }
-
         .badge {
             background: rgba(212, 175, 55, 0.2);
             padding: 4px 16px;
@@ -385,38 +350,33 @@
             font-weight: 500;
             color: var(--gold);
         }
-
         .highlight-list {
             margin: 1.2rem 0;
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-
         .highlight-item {
             display: flex;
             gap: 12px;
             align-items: center;
             font-size: 0.95rem;
         }
-
         .highlight-item i {
             color: var(--gold);
             width: 20px;
         }
-
+        /* ── TIMELINE ── */
         .timeline {
             max-width: 800px;
             margin: 0 auto;
         }
-
         .timeline-item {
             border-left: 2px solid var(--gold);
             padding-left: 2rem;
             margin-bottom: 2.5rem;
             position: relative;
         }
-
         .timeline-item:before {
             content: '';
             width: 12px;
@@ -427,31 +387,27 @@
             left: -7px;
             top: 5px;
         }
-
         .timeline-date {
             font-weight: 600;
             color: var(--gold);
             margin-bottom: 0.3rem;
         }
-
+        /* ── PROJECTS ── */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
             gap: 2rem;
         }
-
         .project-card {
             background: var(--dark-card);
             border-radius: 24px;
             overflow: hidden;
             transition: var(--transition);
         }
-
         .project-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.5);
         }
-
         .project-img {
             background: #1A1A24;
             height: 180px;
@@ -461,11 +417,9 @@
             font-size: 3rem;
             color: var(--gold);
         }
-
         .project-content {
             padding: 1.5rem;
         }
-
         .project-link {
             color: var(--gold);
             text-decoration: none;
@@ -476,31 +430,27 @@
             margin-top: 1rem;
             transition: var(--transition);
         }
-
         .project-link:hover {
             gap: 10px;
             color: var(--gold-light);
         }
-
+        /* ── CONTACT (enhanced) ── */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
             gap: 2.5rem;
         }
-
         .contact-details {
             background: var(--dark-card);
             border-radius: 28px;
             padding: 2rem;
         }
-
         .contact-item {
             display: flex;
             align-items: center;
             gap: 1rem;
             margin-bottom: 1.8rem;
         }
-
         .contact-icon {
             width: 48px;
             height: 48px;
@@ -512,17 +462,14 @@
             font-size: 1.3rem;
             color: var(--gold);
         }
-
         .contact-form {
             background: var(--dark-card);
             padding: 2rem;
             border-radius: 28px;
         }
-
         .form-group {
             margin-bottom: 1.3rem;
         }
-
         .form-control {
             width: 100%;
             padding: 14px 16px;
@@ -533,18 +480,77 @@
             font-family: inherit;
             transition: var(--transition);
         }
-
         .form-control:focus {
             outline: none;
             border-color: var(--gold);
         }
+        .form-control::placeholder {
+            color: #666;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .form-submit-row {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .form-status {
+            font-size: 0.9rem;
+            padding: 0.5rem 0;
+            min-height: 2.2rem;
+        }
+        .form-status.success {
+            color: #6fcf97;
+        }
+        .form-status.error {
+            color: #f28b82;
+        }
+        .form-status.loading {
+            color: var(--gold);
+        }
 
+        /* ── LEAD MAGNET BANNER ── */
+        .lead-magnet {
+            margin-top: 2.5rem;
+            background: linear-gradient(135deg, #1a1a28, #0f0f18);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 28px;
+            padding: 2rem 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .lead-magnet-content {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .lead-magnet-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+        }
+        .lead-magnet h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+        .lead-magnet p {
+            color: var(--gray-500);
+            font-size: 0.95rem;
+        }
+
+        /* ── FOOTER ── */
         footer {
             border-top: 1px solid rgba(212, 175, 55, 0.15);
             padding: 3rem 0 2rem;
             text-align: center;
         }
-
         .social-links {
             display: flex;
             justify-content: center;
@@ -552,7 +558,6 @@
             margin-bottom: 1.5rem;
             flex-wrap: wrap;
         }
-
         .social-link {
             background: #1A1A22;
             width: 44px;
@@ -565,25 +570,52 @@
             transition: var(--transition);
             text-decoration: none;
         }
-
         .social-link:hover {
             background: var(--gold);
             color: #0A0A0C;
             transform: translateY(-3px);
         }
 
+        /* ── RESPONSIVE ── */
         @media (max-width: 992px) {
-            h1 { font-size: 2.8rem; }
-            .hero-grid { flex-direction: column-reverse; text-align: center; }
-            .hero-content { text-align: center; }
-            .hero-description { margin-left: auto; margin-right: auto; }
-            .cta-group { justify-content: center; }
-            .contact-grid { grid-template-columns: 1fr; }
+            h1 {
+                font-size: 2.8rem;
+            }
+            .hero-grid {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .hero-content {
+                text-align: center;
+            }
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .cta-group {
+                justify-content: center;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .lead-magnet {
+                flex-direction: column;
+                text-align: center;
+            }
+            .lead-magnet-content {
+                justify-content: center;
+            }
         }
-
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
+            .nav-links {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
             .nav-links.active {
                 display: flex;
                 flex-direction: column;
@@ -597,370 +629,652 @@
                 text-align: center;
                 border-top: 1px solid rgba(212, 175, 55, 0.2);
             }
-            .profile-ring { width: 260px; height: 260px; }
-            .skills-grid { grid-template-columns: 1fr; }
-            .achievement-flex { flex-direction: column; align-items: center; text-align: center; }
-            .highlight-item { justify-content: center; }
+            .profile-ring {
+                width: 260px;
+                height: 260px;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .achievement-flex {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .highlight-item {
+                justify-content: center;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-submit-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
         }
 
+        /* ── FADE-IN ── */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.7s ease, transform 0.7s ease;
         }
-
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* ── TOAST NOTIFICATION ── */
+        #toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #1e1e2a;
+            border: 1px solid var(--gold);
+            border-radius: 16px;
+            padding: 16px 24px;
+            color: #fff;
+            font-size: 0.95rem;
+            z-index: 9999;
+            transform: translateY(80px);
+            opacity: 0;
+            transition: all 0.4s ease;
+            pointer-events: none;
+            max-width: 420px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        #toast.show {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+        #toast i {
+            font-size: 1.3rem;
+            color: var(--gold);
+        }
+        #toast.success i {
+            color: #6fcf97;
+        }
+        #toast.error i {
+            color: #f28b82;
+        }
     </style>
 </head>
+
 <body>
 
-<nav id="navbar">
-    <div class="container nav-container">
-        <a href="#home" class="logo"><i class="fas fa-shield-alt"></i> Ouma Haningtone</a>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Expertise</a></li>
-            <li><a href="#achievements">Recognition</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Work</a></li>
-            <li><a href="#contact">Connect</a></li>
-        </ul>
-    </div>
-</nav>
+    <!-- ═══ TOAST ═══ -->
+    <div id="toast"><i class="fas fa-bell"></i><span id="toastMsg">Ready</span></div>
 
-<section id="home" class="hero">
-    <div class="container hero-grid">
-        <div class="hero-content">
-            <div class="hero-badge fade-in">
-                <i class="fas fa-shield-alt"></i> Acknowledgment by KE-CIRT/CC · Available Worldwide
-            </div>
-            <h1 class="fade-in">Bridging <span style="color: var(--gold);">Growth</span> & <span style="color: var(--gold);">Security</span></h1>
-            <p class="hero-description fade-in">I automate lead generation, secure digital workspaces, and uncover network risks. Technical VA + Security Researcher — one role, two superpowers.</p>
-            <div class="cta-group fade-in">
-                <a href="#contact" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Let's see if we're a fit</a>
-                <a href="#projects" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> See live work</a>
-            </div>
+    <!-- ═══ NAV ═══ -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo"><i class="fas fa-shield-alt"></i> Ouma Haningtone</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Expertise</a></li>
+                <li><a href="#achievements">Recognition</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact">Connect</a></li>
+            </ul>
         </div>
-        <div class="hero-image fade-in">
-            <div class="profile-ring">
-                <div class="profile-inner">
-                    <i class="fas fa-user-astronaut"></i>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge fade-in">
+                    <i class="fas fa-shield-alt"></i> Acknowledged by KE-CIRT/CC · Remote Worldwide
+                </div>
+                <h1 class="fade-in">Bridging <span style="color: var(--gold);">Growth</span> &amp; <span style="color: var(--gold);">Security</span></h1>
+                <p class="hero-description fade-in">I automate lead generation, secure digital workspaces, and uncover network risks. Technical VA + Security Researcher — one role, two superpowers.</p>
+                <div class="cta-group fade-in">
+                    <a href="#contact" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Let's see if we're a fit</a>
+                    <a href="#projects" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> See live work</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <div class="profile-ring">
+                    <div class="profile-inner">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="skills">
-    <div class="container">
-        <div class="section-title">
-            <h2>What I deliver</h2>
-            <p>Growth automation + security protection = peace of mind</p>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-robot"></i></div>
-                <h3>Lead Generation Automation</h3>
-                <p>Website Scraping, Python scripts that find your next 100 clients while you sleep. Apollo.io, LinkedIn automation, and custom scrapers.</p>
-                <div class="skill-tags"><span class="tag">Python</span><span class="tag">Apollo.io</span><span class="tag">Web Scraping</span>
-                <span class="tag">CRM Integration</span><span class="tag">Prospeo</span> <span class="tag">Gmass</span></div>
+    <!-- ═══ SKILLS ═══ -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>What I deliver</h2>
+                <p>Growth automation + security protection = peace of mind</p>
             </div>
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-shield-hog"></i></div>
-                <h3>Security Research & OSINT</h3>
-                <p>Identify vulnerabilities before bad actors do. Ethical disclosure, network scanning, and asset auditing.</p>
-                <div class="skill-tags"><span class="tag">Nessus</span><span class="tag">Python-Nmap</span><span class="tag">Vulnerability Assessment</span>
-                <span class="tag">KE-CIRT/CC</span><span class="tag">Shodan</span></div>
-            </div>
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-                <h3>Data Analytics & Dashboards</h3>
-                <p>Turn messy data into actionable insights. Tableau, Power BI, and Python visualizations that drive decisions.</p>
-                <div class="skill-tags"><span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">Pandas</span>
-                <span class="tag">Julius AI</span></div>
-            </div>
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-globe"></i></div>
-                <h3>Web Dev & Automation Tools</h3>
-                <p>Custom web apps, landing pages, AI Chart Bot and internal tools that solve real business problems.</p>
-                <div class="skill-tags"><span class="tag">Streamlit</span><span class="tag">HTML/CSS/JS</span><span class="tag">Python</span>
-                <span class="tag">Git</span></div>
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Lead Generation Automation</h3>
+                    <p>Website scraping, Python scripts that find your next 100 clients while you sleep. Apollo.io, LinkedIn automation, and custom scrapers.</p>
+                    <div class="skill-tags"><span class="tag">Python</span><span class="tag">Apollo.io</span><span class="tag">Web Scraping</span><span class="tag">CRM Integration</span><span class="tag">Prospeo</span><span class="tag">Gmass</span></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon"><i class="fas fa-shield-hog"></i></div>
+                    <h3>Security Research &amp; OSINT</h3>
+                    <p>Identify vulnerabilities before bad actors do. Ethical disclosure, network scanning, and asset auditing.</p>
+                    <div class="skill-tags"><span class="tag">Nessus</span><span class="tag">Python-Nmap</span><span class="tag">Vulnerability Assessment</span><span class="tag">KE-CIRT/CC</span><span class="tag">Shodan</span></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Data Analytics &amp; Dashboards</h3>
+                    <p>Turn messy data into actionable insights. Tableau, Power BI, and Python visualizations that drive decisions.</p>
+                    <div class="skill-tags"><span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">Pandas</span><span class="tag">Julius AI</span></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Web Dev &amp; Automation Tools</h3>
+                    <p>Custom web apps, landing pages, AI Chart Bot and internal tools that solve real business problems.</p>
+                    <div class="skill-tags"><span class="tag">Streamlit</span><span class="tag">HTML/CSS/JS</span><span class="tag">Python</span><span class="tag">Git</span></div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="achievements">
-    <div class="container">
-        <div class="section-title">
-            <h2>Credibility in action</h2>
-            <p>Recognized for impact beyond code</p>
-        </div>
-        <div class="achievement-card fade-in">
-            <div class="achievement-flex">
-                <div class="achievement-icon"><i class="fas fa-bug"></i></div>
-                <div class="achievement-stats">
-                    <h3>National Cybersecurity Acknowledgment</h3>
-                    <div class="badge-list">
-                        <span class="badge"><i class="fas fa-check-circle"></i> KE-CIRT/CC</span>
-                        <span class="badge">Responsible Disclosure</span>
-                        <span class="badge">Ethical Research</span>
-                    </div>
-                    <p>Identified and responsibly reported a critical infrastructure vulnerability through passive OSINT research. The finding was officially acknowledged by Kenya's National Computer Incident Response Team, leading to a security patch that strengthened national assets.</p>
-                    <div class="highlight-list">
-                        <div class="highlight-item"><i class="fas fa-shield-heart"></i> <span>Non-intrusive methodology aligned with global standards</span>
+    <!-- ═══ ACHIEVEMENTS ═══ -->
+    <section id="achievements">
+        <div class="container">
+            <div class="section-title">
+                <h2>Credibility in action</h2>
+                <p>Recognized for impact beyond code</p>
+            </div>
+            <div class="achievement-card fade-in">
+                <div class="achievement-flex">
+                    <div class="achievement-icon"><i class="fas fa-bug"></i></div>
+                    <div class="achievement-stats">
+                        <h3>National Cybersecurity Acknowledgment</h3>
+                        <div class="badge-list">
+                            <span class="badge"><i class="fas fa-check-circle"></i> KE-CIRT/CC</span>
+                            <span class="badge">Responsible Disclosure</span>
+                            <span class="badge">Ethical Research</span>
                         </div>
-                        <div class="highlight-item"><i class="fas fa-trophy"></i> <span>Official remediation confirmation from KE-CIRT/CC</span></div>
-                        <div class="highlight-item"><i class="fas fa-handshake"></i> <span>Demonstrates proactive risk management for partners</span></div>
+                        <p>Identified and responsibly reported a critical infrastructure vulnerability through passive OSINT research. The finding was officially acknowledged by Kenya's National Computer Incident Response Team, leading to a security patch that strengthened national assets.</p>
+                        <div class="highlight-list">
+                            <div class="highlight-item"><i class="fas fa-shield-heart"></i><span>Non-intrusive methodology aligned with global standards</span></div>
+                            <div class="highlight-item"><i class="fas fa-trophy"></i><span>Official remediation confirmation from KE-CIRT/CC</span></div>
+                            <div class="highlight-item"><i class="fas fa-handshake"></i><span>Demonstrates proactive risk management for partners</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="achievement-card fade-in" style="margin-top:2rem;">
+                <div class="achievement-flex">
+                    <div class="achievement-icon"><i class="fas fa-network-wired"></i></div>
+                    <div class="achievement-stats">
+                        <h3>Hands‑on Vulnerability Management</h3>
+                        <div class="badge-list">
+                            <span class="badge">Nessus Essentials</span>
+                            <span class="badge">Python‑Nmap Automation</span>
+                            <span class="badge">Credentialed Scanning</span>
+                        </div>
+                        <p>Conducted full vulnerability assessments on network gateways (routers) and local assets. Successfully identified and documented 22+ security findings, from open ports to service enumeration, and built an automated Python‑Nmap scanner that reduces manual checks from 2 hours to under 15 minutes.</p>
+                        <div class="highlight-list">
+                            <div class="highlight-item"><i class="fas fa-chart-line"></i><span>Risk prioritization using CVSS / VPR frameworks</span></div>
+                            <div class="highlight-item"><i class="fas fa-file-alt"></i><span>Automated CSV reporting for stakeholder review</span></div>
+                            <div class="highlight-item"><i class="fas fa-microchip"></i><span>Deep understanding of credentialed vs. non‑credentialed scans</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- New: Vulnerability Assessment Recognition Card -->
-        <div class="achievement-card fade-in" style="margin-top: 2rem;">
-            <div class="achievement-flex">
-                <div class="achievement-icon"><i class="fas fa-network-wired"></i></div>
-                <div class="achievement-stats">
-                    <h3>Hands‑on Vulnerability Management</h3>
-                    <div class="badge-list">
-                        <span class="badge">Nessus Essentials</span>
-                        <span class="badge">Python‑Nmap Automation</span>
-                        <span class="badge">Credentialed Scanning</span>
+    </section>
+
+    <!-- ═══ EXPERIENCE ═══ -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Recent track record</h2>
+                <p>Real-world results from diverse roles</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">Apr 2026 – present</div>
+                    <h3>Technical Lead Gen &amp; Email Marketing</h3>
+                    <p>Tandao Africa</p>
+                    <p>Orchestrated referral logistics and confidential case coordination. Improved response tracking by 30% with systematic follow-up protocols.</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">Apr 2025 – present</div>
+                    <h3>Youth Support Rover &amp; Referral Coordinator</h3>
+                    <p>Center for the Study of Adolescent Health</p>
+                    <p>Orchestrated referral logistics and confidential case coordination. Improved response tracking by 30% with systematic follow-up protocols.</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">Jan 2024 – Jul 2025</div>
+                    <h3>Computer Maintenance &amp; Support Lead</h3>
+                    <p>ICS College, Kisumu</p>
+                    <p>Maintained LAN infrastructure for 500+ concurrent users, ensured 100% uptime for online examination systems, and reduced hardware downtime by 40%.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PROJECTS ═══ -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured solutions</h2>
+                <p>Live projects that solve real problems</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-img"><i class="fas fa-shield-virus"></i></div>
+                    <div class="project-content">
+                        <h3>Python-Nmap Network Scanner</h3>
+                        <p>Automated vulnerability scanner that performs full port discovery, service version detection, and exports CSV reports. Reduces manual checks from 2 hours to <strong>15 minutes</strong>. Built for ethical network audits.</p>
+                        <div class="skill-tags" style="margin-bottom:0.8rem;"><span class="tag">Python</span><span class="tag">Nmap</span><span class="tag">CSV Automation</span><span class="tag">Cybersecurity</span></div>
+                        <a href="#" class="project-link" target="_blank" rel="noopener">Demo / GitHub <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <p>Conducted full vulnerability assessments on network gateways (routers) and local assets. Successfully identified and documented 22+ security findings, from open ports to service enumeration, and built an automated Python‑Nmap scanner that reduces manual checks from 2 hours to under 15 minutes.</p>
-                    <div class="highlight-list">
-                        <div class="highlight-item"><i class="fas fa-chart-line"></i> <span>Risk prioritization using CVSS / VPR frameworks</span></div>
-                        <div class="highlight-item"><i class="fas fa-file-alt"></i> <span>Automated CSV reporting for stakeholder review</span></div>
-                        <div class="highlight-item"><i class="fas fa-microchip"></i> <span>Deep understanding of credentialed vs. non‑credentialed scans</span></div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-img"><i class="fas fa-shield-alt"></i></div>
+                    <div class="project-content">
+                        <h3>HR Data Safety Checker</h3>
+                        <p>Web app that helps HR consultants assess SME data security risks in 2 minutes. Generates professional PDF reports with safety scores and actionable recommendations. Built with Python Streamlit.</p>
+                        <div class="skill-tags" style="margin-bottom:0.8rem;"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">HR Tech</span><span class="tag">Data Protection</span></div>
+                        <a href="https://hr-safety-checker-vycabpj9edshqluucihwrt.streamlit.app/" class="project-link" target="_blank" rel="noopener">Live demo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-img"><i class="fas fa-chart-line"></i></div>
+                    <div class="project-content">
+                        <h3>Data Analytics &amp; Dashboards</h3>
+                        <p>Interactive Tableau dashboard that helped a retail client uncover profit leakages and optimize discount strategies, resulting in 18% better margin visibility.</p>
+                        <a href="https://hansec-technology-dot.github.io/Corporate-Data-Analytics-Dashboards/" class="project-link" target="_blank" rel="noopener">Live demo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-img"><i class="fas fa-robot"></i></div>
+                    <div class="project-content">
+                        <h3>AI-Powered Web App Dev</h3>
+                        <p>Landing page with smart Chart Bot and automated PDF data, terminology extraction. Reduced lookup time by 60% in trials.</p>
+                        <a href="https://hansec-technology-dot.github.io/Landing_pages/" class="project-link" target="_blank" rel="noopener">View case study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-img"><i class="fas fa-briefcase"></i></div>
+                    <div class="project-content">
+                        <h3>Technical VA Operations Hub</h3>
+                        <p>Centralized portfolio demonstrating lead generation automation, CRM integration, and calendar management built for efficiency focused founders.</p>
+                        <a href="https://hansec-technology-dot.github.io/Technical-VA-Automation-Tools/" class="project-link" target="_blank" rel="noopener">Live preview <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="experience">
-    <div class="container">
-        <div class="section-title">
-            <h2>Recent track record</h2>
-            <p>Real-world results from diverse roles</p>
-        </div>
-        <div class="timeline">
-            <div class="timeline-item fade-in">
-                <div class="timeline-date">Apr 2026 – uptime</div>
-                <h3>Technical lead Gen & Email Marketing</h3>
-                <p>Tandao Africa  ·</p>
-                <p>Orchestrated referral logistics and confidential case coordination. Improved response tracking by 30% with systematic follow-up protocols.
-                </p>
+    <!-- ═══ CONTACT + LEAD CAPTURE ═══ -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Let's build something valuable</h2>
+                <p>Available for freelance, contract, or full-time remote roles</p>
             </div>
-			
-			<div class="timeline-item fade-in">
-                <div class="timeline-date">Apr 2025 – Present 2026</div>
-                <h3>Youth Support Rover & Referral Coordinator</h3>
-                <p>Center for the Study of Adolescent Health ·</p>
-                <p>Orchestrated referral logistics and confidential case coordination. Improved response tracking by 30% with systematic follow-up protocols.
-                </p>
-            </div>
-            <div class="timeline-item fade-in">
-                <div class="timeline-date">Jan 2024 – Jul 2025</div>
-                <h3>Computer Maintenance & Support Lead</h3>
-                <p>ICS College, Kisumu</p>
-                <p>Maintained LAN infrastructure for 500+ concurrent users, ensured 100% uptime for online examination systems, and reduced hardware downtime by 40%.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="projects">
-    <div class="container">
-        <div class="section-title">
-            <h2>Featured solutions</h2>
-            <p>Live projects that solve real problems</p>
-        </div>
-        <div class="projects-grid">
-            <!-- NEW: Vulnerability Scanner Project -->
-            <div class="project-card fade-in">
-                <div class="project-img"><i class="fas fa-shield-virus"></i></div>
-                <div class="project-content">
-                    <h3>Python-Nmap Network Scanner</h3>
-                    <p>Automated vulnerability scanner that performs full port discovery, service version detection, and exports CSV reports. Reduces manual checks from 2 hours to <strong>15 minutes</strong>. Built for ethical network audits.</p>
-                    <div class="skill-tags" style="margin-bottom: 0.8rem;">
-                        <span class="tag">Python</span>
-                        <span class="tag">Nmap</span>
-                        <span class="tag">CSV Automation</span>
-                        <span class="tag">Cybersecurity</span>
+            <div class="contact-grid">
+                <!-- left: details -->
+                <div class="contact-details fade-in">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-pin"></i></div>
+                        <div><h3>Location</h3><p>Kisumu, Kenya (Remote worldwide)</p></div>
                     </div>
-                    <a href="#" class="project-link" target="_blank" rel="noopener">Demo / GitHub <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-img"><i class="fas fa-shield-alt"></i></div>
-                <div class="project-content">
-                    <h3>HR Data Safety Checker</h3>
-                    <p>Web app that helps HR consultants assess SME data security risks in 2 minutes. Generates professional PDF reports with safety scores and actionable recommendations. Built with Python Streamlit.</p>
-                    <div class="skill-tags" style="margin-bottom: 0.8rem;">
-                        <span class="tag">Python</span>
-                        <span class="tag">Streamlit</span>
-                        <span class="tag">HR Tech</span>
-                        <span class="tag">Data Protection</span>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div><h3>Response time</h3><p>Within 24 business hours</p></div>
                     </div>
-                    <a href="https://hr-safety-checker-vycabpj9edshqluucihwrt.streamlit.app/" class="project-link" target="_blank" rel="noopener">Live demo <i class="fas fa-arrow-right"></i></a>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div><h3>Email</h3><p>stiriohaningtone630@gmail.com</p></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                        <div><h3>LinkedIn</h3><p>linkedin.com/in/ouma-haningtone</p></div>
+                    </div>
+                    <!-- Lead Magnet -->
+                    <div class="lead-magnet" style="margin-top:1.5rem;">
+                        <div class="lead-magnet-content">
+                            <div class="lead-magnet-icon"><i class="fas fa-gift"></i></div>
+                            <div>
+                                <h3>Free 15‑min Security Audit</h3>
+                                <p>Fill out the form → get a quick vulnerability scan + action plan.</p>
+                            </div>
+                        </div>
+                        <a href="#contact-form" class="btn btn-primary" style="flex-shrink:0;"><i class="fas fa-arrow-right"></i> Claim now</a>
+                    </div>
                 </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-img"><i class="fas fa-chart-line"></i></div>
-                <div class="project-content">
-                    <h3>Data Analytics & Dashboards</h3>
-                    <p>Interactive Tableau dashboard that helped a retail client uncover profit leakages and optimize discount strategies, resulting in 18% better margin visibility.</p>
-                    <a href="https://hansec-technology-dot.github.io/Corporate-Data-Analytics-Dashboards/" class="project-link" target="_blank" rel="noopener">Live demo <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-img"><i class="fas fa-robot"></i></div>
-                <div class="project-content">
-                    <h3>AI-Powered Web App Dev</h3>
-                    <p>Landing page with smart Chart Bot  and automated PDF data, terminology extraction. Reduced lookup time by 60% in trials.</p>
-                    <a href="https://hansec-technology-dot.github.io/Landing_pages/" class="project-link" target="_blank" rel="noopener">View case study <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-img"><i class="fas fa-briefcase"></i></div>
-                <div class="project-content">
-                    <h3>Technical VA Operations Hub</h3>
-                    <p>Centralized portfolio demonstrating lead generation automation, CRM integration, and calendar management built for efficiency focused founders.</p>
-                    <a href="https://hansec-technology-dot.github.io/Technical-VA-Automation-Tools/" class="project-link" target="_blank" rel="noopener">Live preview <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section id="contact">
-    <div class="container">
-        <div class="section-title">
-            <h2>Let's build something valuable</h2>
-            <p>Available for freelance, contract, or full-time remote roles</p>
-        </div>
-        <div class="contact-grid">
-            <div class="contact-details fade-in">
-                <div class="contact-item">
-                    <div class="contact-icon"><i class="fas fa-map-pin"></i></div>
-                    <div><h3>Location</h3><p>Kisumu, Kenya (Remote worldwide)</p></div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                    <div><h3>Response time</h3><p>Within 24 business hours</p></div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                    <div><h3>Email</h3><p>stiriohaningtone630@gmail.com</p></div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
-                    <div><h3>LinkedIn</h3><p>linkedin.com/in/ouma-haningtone</p></div>
+                <!-- right: contact form with EmailJS -->
+                <div class="contact-form fade-in" id="contact-form">
+                    <h3 style="margin-bottom:1.2rem;color:var(--gold);">Drop your details — I'll reply within 24h</h3>
+                    <form id="leadForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="leadName" placeholder="Full name *" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="leadEmail" placeholder="Email address *" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="leadCompany" placeholder="Company / Project name" />
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="leadMessage" rows="4" placeholder="What challenge are you facing? (e.g. lead gen, security audit, automation...)" required></textarea>
+                        </div>
+                        <div class="form-submit-row">
+                            <button type="submit" class="btn btn-primary" id="submitBtn" style="min-width:160px;">
+                                <i class="fas fa-paper-plane"></i> Send &amp; trigger sequence
+                            </button>
+                            <div class="form-status" id="formStatus"></div>
+                        </div>
+                        <p style="font-size:0.75rem;color:var(--gray-500);margin-top:0.8rem;">
+                            <i class="fas fa-lock"></i> Your data is secure. Submitting triggers a follow‑up email sequence.
+                        </p>
+                    </form>
                 </div>
             </div>
-            
         </div>
-    </div>
-</section>
+    </section>
 
-<footer>
-    <div class="container">
-        <div class="social-links">
-            <a href="mailto:stiriohaningtone630@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/ouma-haningtone" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/hansec-technology-dot" class="social-link" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="tel:+254743489272" class="social-link" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="mailto:stiriohaningtone630@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/ouma-haningtone" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/hansec-technology-dot" class="social-link" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="tel:+254743489272" class="social-link" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
+                <a href="#" class="social-link" id="calendlyTrigger" aria-label="Book a call"><i class="fas fa-calendar-plus"></i></a>
+            </div>
+            <p class="copyright">© 2026 Ouma Haningtone — Technical VA &amp; Security Researcher<br />Bridging growth automation with data protection | Vulnerability Assessment &amp; OSINT</p>
         </div>
-        <p class="copyright">© 2026 Ouma Haningtone — Technical VA & Security Researcher<br>Bridging growth automation with data protection | Vulnerability Assessment & OSINT</p>
-    </div>
-</footer>
+    </footer>
 
-<script>
-    const navbar = document.getElementById('navbar');
-    const mobileBtn = document.getElementById('mobileMenuBtn');
-    const navLinksEl = document.getElementById('navLinks');
-    const fadeElements = document.querySelectorAll('.fade-in');
-    
-    window.addEventListener('scroll', () => {
-        if(window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-        updateActiveLink();
-        checkFade();
-    });
-    
-    if(mobileBtn) {
-        mobileBtn.addEventListener('click', () => {
-            navLinksEl.classList.toggle('active');
-            const icon = mobileBtn.querySelector('i');
-            if(icon) {
-                icon.className = navLinksEl.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- ═══ JAVASCRIPT — all in one place ═══ -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <script>
+        (function() {
+            'use strict';
+
+            /* ── DOM refs ── */
+            const navbar = document.getElementById('navbar');
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const navLinksEl = document.getElementById('navLinks');
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const form = document.getElementById('leadForm');
+            const statusEl = document.getElementById('formStatus');
+            const submitBtn = document.getElementById('submitBtn');
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            let toastTimer = null;
+
+            /* ── Toast helper ── */
+            function showToast(msg, type) {
+                if (toastTimer) { clearTimeout(toastTimer);
+                    toastTimer = null; }
+                toast.className = '';
+                const icon = toast.querySelector('i');
+                icon.className = 'fas';
+                if (type === 'success') { toast.className = 'success';
+                    icon.className += ' fa-check-circle'; } else if (type === 'error') { toast.className = 'error';
+                    icon.className += ' fa-exclamation-circle'; } else { icon.className += ' fa-bell'; }
+                toastMsg.textContent = msg;
+                toast.classList.add('show');
+                toastTimer = setTimeout(function() { toast.classList.remove('show'); }, 5000);
             }
-        });
-    }
-    
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinksEl?.classList.remove('active');
-            if(mobileBtn) {
-                const icon = mobileBtn.querySelector('i');
-                if(icon) icon.className = 'fas fa-bars';
-            }
-        });
-    });
-    
-    function checkFade() {
-        fadeElements.forEach(el => {
-            const top = el.getBoundingClientRect().top;
-            if(top < window.innerHeight - 100) {
-                el.classList.add('visible');
-            }
-        });
-    }
-    
-    function updateActiveLink() {
-        const sections = document.querySelectorAll('section[id]');
-        let currentId = '';
-        sections.forEach(section => {
-            const top = section.offsetTop - 150;
-            if(scrollY >= top) {
-                currentId = section.getAttribute('id');
-            }
-        });
-        document.querySelectorAll('.nav-links a').forEach(a => {
-            a.classList.remove('active');
-            const href = a.getAttribute('href');
-            if(href === `#${currentId}`) {
-                a.classList.add('active');
-            }
-        });
-    }
-    
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            if(targetId === '#') return;
-            const targetElement = document.querySelector(targetId);
-            if(targetElement) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
+
+            /* ── Nav ── */
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+                updateActiveLink();
+                checkFade();
+            });
+
+            if (mobileBtn) {
+                mobileBtn.addEventListener('click', function() {
+                    navLinksEl.classList.toggle('active');
+                    const icon = mobileBtn.querySelector('i');
+                    if (icon) icon.className = navLinksEl.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
                 });
             }
-        });
-    });
-    
-    checkFade();
-    updateActiveLink();
-</script>
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    navLinksEl.classList.remove('active');
+                    if (mobileBtn) { const icon = mobileBtn.querySelector('i'); if (icon) icon.className =
+                        'fas fa-bars'; }
+                });
+            });
+
+            function checkFade() {
+                fadeElements.forEach(function(el) {
+                    var top = el.getBoundingClientRect().top;
+                    if (top < window.innerHeight - 100) el.classList.add('visible');
+                });
+            }
+
+            function updateActiveLink() {
+                var sections = document.querySelectorAll('section[id]');
+                var currentId = '';
+                sections.forEach(function(section) {
+                    var top = section.offsetTop - 150;
+                    if (window.scrollY >= top) currentId = section.getAttribute('id');
+                });
+                document.querySelectorAll('.nav-links a').forEach(function(a) {
+                    a.classList.remove('active');
+                    if (a.getAttribute('href') === '#' + currentId) a.classList.add('active');
+                });
+            }
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    var targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    var targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' });
+                    }
+                });
+            });
+            checkFade();
+            updateActiveLink();
+
+            /* ── Calendly trigger ── */
+            document.getElementById('calendlyTrigger').addEventListener('click', function(e) {
+                e.preventDefault();
+                showToast('📅 Book a discovery call: https://calendly.com/your-link', '');
+                // Replace with your actual Calendly link
+                window.open('https://calendly.com/your-link', '_blank');
+            });
+
+            /* ── ═══ EMAILJS + LEAD CAPTURE ═══ ── */
+            // ── CONFIGURATION ──
+            // Sign up at https://www.emailjs.com/ and get your keys.
+            // Replace the placeholders below with your actual credentials.
+            const EMAILJS_PUBLIC_KEY = 'YOUR_EMAILJS_PUBLIC_KEY'; // e.g. 'abc123def456'
+            const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // e.g. 'service_abc123'
+            const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // e.g. 'template_xyz789'
+            // ───────────────────
+
+            // Initialize EmailJS if key is provided
+            let emailjsReady = false;
+            if (EMAILJS_PUBLIC_KEY && EMAILJS_PUBLIC_KEY !== 'YOUR_EMAILJS_PUBLIC_KEY') {
+                try {
+                    emailjs.init(EMAILJS_PUBLIC_KEY);
+                    emailjsReady = true;
+                } catch (_) { emailjsReady = false; }
+            }
+
+            // Helper to get or create lead session ID
+            function getLeadSessionId() {
+                let sid = localStorage.getItem('hansec_lead_sid');
+                if (!sid) {
+                    sid = 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(2, 8);
+                    localStorage.setItem('hansec_lead_sid', sid);
+                }
+                return sid;
+            }
+
+            // Track page view (lead capture trigger)
+            function trackPageView() {
+                var visits = parseInt(localStorage.getItem('hansec_visits') || '0', 10) + 1;
+                localStorage.setItem('hansec_visits', String(visits));
+                // If this is the first visit, show a subtle toast
+                if (visits === 1) {
+                    setTimeout(function() {
+                        showToast('👋 Welcome! Drop your details for a free security audit.', '');
+                    }, 2000);
+                }
+                // Send a silent ping to your analytics / webhook if needed
+                // This is where you'd fire a webhook to Zapier / Make.com to trigger a SalesLoft sequence
+                // Example: fetch('https://hook.zapier.com/your/webhook', { method: 'POST', body: JSON.stringify({ event: 'page_view', leadId: getLeadSessionId() }) })
+                if (visits % 5 === 0) {
+                    // Every 5th visit, remind them
+                    setTimeout(function() {
+                        showToast('🔍 Need a security audit? I\'m one message away.', '');
+                    }, 3000);
+                }
+            }
+            trackPageView();
+
+            // ── Form submission ──
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Gather data
+                var name = document.getElementById('leadName').value.trim();
+                var email = document.getElementById('leadEmail').value.trim();
+                var company = document.getElementById('leadCompany').value.trim();
+                var message = document.getElementById('leadMessage').value.trim();
+
+                // Validate
+                if (!name || !email || !message) {
+                    statusEl.textContent = '⚠️ Please fill in all required fields.';
+                    statusEl.className = 'form-status error';
+                    showToast('Please fill in all required fields.', 'error');
+                    return;
+                }
+                if (!email.includes('@') || !email.includes('.')) {
+                    statusEl.textContent = '⚠️ Please enter a valid email address.';
+                    statusEl.className = 'form-status error';
+                    showToast('Invalid email address.', 'error');
+                    return;
+                }
+
+                // Build lead payload
+                var leadData = {
+                    name: name,
+                    email: email,
+                    company: company || 'Not specified',
+                    message: message,
+                    leadId: getLeadSessionId(),
+                    source: 'hansec-portfolio',
+                    timestamp: new Date().toISOString(),
+                    visits: parseInt(localStorage.getItem('hansec_visits') || '0', 10)
+                };
+
+                // Show loading state
+                statusEl.textContent = '⏳ Sending & triggering sequence...';
+                statusEl.className = 'form-status loading';
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+                // ── 1. Send via EmailJS ──
+                var sendEmail = function() {
+                    return new Promise(function(resolve, reject) {
+                        if (!emailjsReady) {
+                            // Fallback: just log and simulate
+                            console.log('📧 EmailJS not configured. Lead captured:', leadData);
+                            resolve({ status: 200, text: 'SIMULATED' });
+                            return;
+                        }
+                        var templateParams = {
+                            from_name: leadData.name,
+                            from_email: leadData.email,
+                            company: leadData.company,
+                            message: leadData.message,
+                            lead_id: leadData.leadId,
+                            visits: leadData.visits,
+                            to_name: 'Ouma Haningtone',
+                            to_email: 'stiriohaningtone630@gmail.com'
+                        };
+                        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+                            .then(function(response) { resolve(response); })
+                            .catch(function(err) { reject(err); });
+                    });
+                };
+
+                // ── 2. Fire webhook to trigger SalesLoft sequence ──
+                var fireWebhook = function() {
+                    // Replace this URL with your actual Zapier / Make / SalesLoft webhook
+                    var webhookUrl = 'https://hook.zapier.com/your/webhook/here';
+                    // If you have a real webhook, uncomment the fetch below
+                    // For now we just log it
+                    console.log('🔗 Webhook trigger (SalesLoft sequence):', leadData);
+                    // Example: 
+                    // return fetch(webhookUrl, {
+                    //     method: 'POST',
+                    //     headers: { 'Content-Type': 'application/json' },
+                    //     body: JSON.stringify(leadData)
+                    // }).then(res => res.json());
+                    return Promise.resolve({ status: 200, message: 'Webhook simulated' });
+                };
+
+                // ── Execute both ──
+                Promise.all([sendEmail(), fireWebhook()])
+                    .then(function(results) {
+                        statusEl.textContent = '✅ Lead captured! Sequence triggered. I\'ll reply within 24h.';
+                        statusEl.className = 'form-status success';
+                        showToast('🎯 Lead captured! Follow-up sequence activated.', 'success');
+                        form.reset();
+                        // Store lead in localStorage for scoring
+                        var leads = JSON.parse(localStorage.getItem('hansec_leads') || '[]');
+                        leads.push(leadData);
+                        localStorage.setItem('hansec_leads', JSON.stringify(leads));
+                        // Increment conversion count
+                        var conversions = parseInt(localStorage.getItem('hansec_conversions') || '0', 10) + 1;
+                        localStorage.setItem('hansec_conversions', String(conversions));
+                    })
+                    .catch(function(err) {
+                        console.error('Lead capture error:', err);
+                        statusEl.textContent = '⚠️ Something went wrong. Please email me directly at stiriohaningtone630@gmail.com';
+                        statusEl.className = 'form-status error';
+                        showToast('⚠️ Error sending. Please email me directly.', 'error');
+                    })
+                    .finally(function() {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send &amp; trigger sequence';
+                    });
+            });
+
+            // ── Optional: lead scoring display (dev only) ──
+            // You can show lead score in console
+            console.log('🧠 Lead Session ID:', getLeadSessionId());
+            console.log('📊 Total visits:', localStorage.getItem('hansec_visits') || 0);
+            console.log('🏆 Total conversions:', localStorage.getItem('hansec_conversions') || 0);
+
+            // ── Auto-fill for demo (remove in production) ──
+            // If you want to pre-fill for testing, uncomment:
+            // document.getElementById('leadName').value = 'Test Lead';
+            // document.getElementById('leadEmail').value = 'test@example.com';
+            // document.getElementById('leadMessage').value = 'I need a security audit for my startup.';
+
+        })();
+    </script>
+
 </body>
 </html>
