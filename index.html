@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Ouma Haningtone | Technical VA | Security Researcher</title>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Ouma Haningtone: Technical Virtual Assistant & Security Researcher. Bridging growth automation with data protection. Trusted by KE-CIRT/CC.">
-    <meta name="author" content="Ouma Haningtone">
-    <meta name="keywords" content="Technical VA, Security Research, Cybersecurity, HR Tech, Python Automation, Data Protection, Vulnerability Assessment, Nessus">
-    <meta name="robots" content="index, follow">
+    <meta name="description" content="Ouma Haningtone: Technical Virtual Assistant & Security Researcher. Bridging growth automation with data protection. Trusted by KE-CIRT/CC." />
+    <meta name="author" content="Ouma Haningtone" />
+    <meta name="keywords" content="Technical VA, Security Research, Cybersecurity, HR Tech, Python Automation, Data Protection, Vulnerability Assessment, Nessus" />
+    <meta name="robots" content="index, follow" />
     <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
+        /* ── Reset & Base ── */
         * {
             margin: 0;
             padding: 0;
@@ -26,13 +27,17 @@
         :root {
             --gold: #D4AF37;
             --gold-light: #F0C45A;
+            --gold-glow: rgba(212, 175, 55, 0.35);
             --dark: #0A0A0C;
             --dark-card: #121218;
+            --dark-card-hover: #1A1A24;
             --gray-100: #F5F5F7;
             --gray-300: #CCCCD0;
             --gray-500: #8E8E93;
             --transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            --shadow-gold: 0 20px 40px -10px rgba(212, 175, 55, 0.15);
+            --radius-card: 28px;
         }
 
         html {
@@ -53,7 +58,10 @@
             padding: 0 28px;
         }
 
-        h1, h2, h3, .logo {
+        h1,
+        h2,
+        h3,
+        .logo {
             font-family: 'Playfair Display', serif;
         }
 
@@ -104,6 +112,7 @@
             border-radius: 2px;
         }
 
+        /* ── Navigation ── */
         nav {
             position: fixed;
             top: 0;
@@ -151,7 +160,8 @@
             transition: var(--transition);
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--gold);
         }
 
@@ -164,6 +174,7 @@
             cursor: pointer;
         }
 
+        /* ── Hero ── */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -293,6 +304,7 @@
             color: var(--gold);
         }
 
+        /* ── Skills ── */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -334,6 +346,7 @@
             font-weight: 500;
         }
 
+        /* ── Achievements ── */
         .achievement-card {
             background: linear-gradient(135deg, #121218 0%, #0E0E12 100%);
             border-radius: 32px;
@@ -405,6 +418,7 @@
             width: 20px;
         }
 
+        /* ── Timeline ── */
         .timeline {
             max-width: 800px;
             margin: 0 auto;
@@ -434,6 +448,7 @@
             margin-bottom: 0.3rem;
         }
 
+        /* ── Projects Grid ── */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
@@ -449,7 +464,7 @@
 
         .project-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.5);
         }
 
         .project-img {
@@ -482,6 +497,430 @@
             color: var(--gold-light);
         }
 
+        /* ────────────────────────────────────────────────
+                   ★ FLAGSHIP PROJECT — GRC DASHBOARD
+                   ──────────────────────────────────────────────── */
+        .flagship-section {
+            margin: 2rem 0 4rem;
+        }
+
+        .flagship-card {
+            background: linear-gradient(145deg, #121218 0%, #0A0A0E 100%);
+            border-radius: var(--radius-card);
+            border: 1px solid rgba(212, 175, 55, 0.20);
+            padding: 2.8rem 2.8rem 2.8rem 2.8rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .flagship-card::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: var(--radius-card);
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), transparent 50%, rgba(212, 175, 55, 0.15));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .flagship-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(212, 175, 55, 0.40);
+            box-shadow: 0 30px 60px -15px rgba(212, 175, 55, 0.12);
+        }
+
+        .flagship-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: stretch;
+        }
+
+        /* ── Left: Content ── */
+        .flagship-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .flagship-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(212, 175, 55, 0.15);
+            padding: 6px 18px 6px 14px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--gold);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            width: fit-content;
+            margin-bottom: 0.2rem;
+        }
+
+        .flagship-badge i {
+            font-size: 0.7rem;
+        }
+
+        .flagship-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin: 0.2rem 0 0.2rem;
+        }
+
+        .flagship-title span {
+            color: var(--gold);
+        }
+
+        .flagship-tagline {
+            font-size: 1.05rem;
+            color: var(--gray-300);
+            margin-bottom: 0.8rem;
+            font-weight: 400;
+        }
+
+        .flagship-features {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+            margin: 0.6rem 0 1.2rem;
+        }
+
+        .flagship-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            font-size: 0.95rem;
+            color: var(--gray-100);
+            line-height: 1.4;
+        }
+
+        .flagship-feature i {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-top: 2px;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .flagship-feature strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .flagship-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0.4rem 0 1.4rem;
+        }
+
+        .flagship-tech .tag {
+            background: rgba(212, 175, 55, 0.10);
+            border: 1px solid rgba(212, 175, 55, 0.20);
+            padding: 6px 16px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border-radius: 40px;
+            color: var(--gold-light);
+            transition: var(--transition);
+            letter-spacing: 0.02em;
+        }
+
+        .flagship-tech .tag:hover {
+            background: rgba(212, 175, 55, 0.20);
+            border-color: var(--gold);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .flagship-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 0.2rem;
+        }
+
+        .flagship-actions .btn {
+            padding: 13px 32px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .flagship-actions .btn-primary {
+            background: var(--gold);
+            color: #0A0A0C;
+            border: none;
+        }
+
+        .flagship-actions .btn-primary:hover {
+            background: var(--gold-light);
+            box-shadow: 0 12px 28px -8px rgba(212, 175, 55, 0.45);
+            transform: translateY(-3px);
+        }
+
+        .flagship-actions .btn-secondary {
+            background: transparent;
+            border: 1.5px solid rgba(212, 175, 55, 0.40);
+            color: var(--gray-100);
+        }
+
+        .flagship-actions .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.08);
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .flagship-actions .btn i {
+            font-size: 0.9rem;
+        }
+
+        /* ── Right: Visual Mockup ── */
+        .flagship-visual {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            min-height: 320px;
+        }
+
+        .flagship-mockup {
+            width: 100%;
+            background: #0D0D14;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            overflow: hidden;
+            position: relative;
+            transition: var(--transition);
+            box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flagship-mockup:hover {
+            border-color: rgba(212, 175, 55, 0.30);
+            box-shadow: 0 20px 50px -10px rgba(212, 175, 55, 0.10);
+        }
+
+        /* Mockup Header */
+        .mockup-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .mockup-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .mockup-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #2A2A34;
+        }
+
+        .mockup-dot:nth-child(1) {
+            background: #FF5F57;
+        }
+        .mockup-dot:nth-child(2) {
+            background: #FFBD2E;
+        }
+        .mockup-dot:nth-child(3) {
+            background: #28C840;
+        }
+
+        .mockup-title {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--gray-500);
+            letter-spacing: 0.04em;
+        }
+
+        .mockup-title i {
+            color: var(--gold);
+            margin-right: 6px;
+            font-size: 0.65rem;
+        }
+
+        /* Mockup Body */
+        .mockup-body {
+            flex: 1;
+            padding: 20px 20px 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        /* KPI row */
+        .mockup-kpis {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .mockup-kpi {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 12px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .mockup-kpi .label {
+            font-size: 0.55rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--gray-500);
+            font-weight: 500;
+        }
+
+        .mockup-kpi .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-top: 2px;
+        }
+
+        .mockup-kpi .value.gold {
+            color: var(--gold);
+        }
+        .mockup-kpi .value.green {
+            color: #4CAF50;
+        }
+        .mockup-kpi .value.orange {
+            color: #FF9800;
+        }
+
+        /* Heat Matrix preview */
+        .mockup-heat {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 4px;
+            margin-top: 2px;
+        }
+
+        .mockup-heat-cell {
+            aspect-ratio: 1 / 1;
+            border-radius: 4px;
+            background: #1A1A24;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .mockup-heat-cell.level-1 {
+            background: #1A3A2A;
+        }
+        .mockup-heat-cell.level-2 {
+            background: #2A5A3A;
+        }
+        .mockup-heat-cell.level-3 {
+            background: #8A7A2A;
+        }
+        .mockup-heat-cell.level-4 {
+            background: #AA5A2A;
+        }
+        .mockup-heat-cell.level-5 {
+            background: #CC3A2A;
+        }
+        .mockup-heat-cell.level-0 {
+            background: #14141C;
+        }
+
+        .mockup-heat-cell:hover {
+            transform: scale(1.15);
+            border-color: var(--gold);
+            box-shadow: 0 0 16px rgba(212, 175, 55, 0.20);
+        }
+
+        /* Bottom row: compliance bars */
+        .mockup-bars {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 6px;
+        }
+
+        .mockup-bar {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .mockup-bar .bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.6rem;
+            color: var(--gray-500);
+            font-weight: 500;
+        }
+
+        .mockup-bar .bar-track {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .mockup-bar .bar-fill {
+            height: 100%;
+            border-radius: 12px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            width: 0%;
+            transition: width 0.8s ease;
+        }
+
+        .mockup-bar .bar-fill.iso {
+            width: 86%;
+        }
+        .mockup-bar .bar-fill.soc {
+            width: 72%;
+        }
+
+        /* Mockup placeholder image fallback */
+        .mockup-image-placeholder {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .flagship-mockup img.mockup-image-placeholder {
+            display: block;
+        }
+
+        /* If image is present, hide the CSS mockup */
+        .flagship-mockup.has-image .mockup-body {
+            display: none;
+        }
+        .flagship-mockup.has-image .mockup-header {
+            display: none;
+        }
+        .flagship-mockup.has-image img.mockup-image-placeholder {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        /* ── Contact ── */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
@@ -573,6 +1012,7 @@
             border: 1px solid #4CAF50;
         }
 
+        /* ── Footer ── */
         footer {
             border-top: 1px solid rgba(212, 175, 55, 0.15);
             padding: 3rem 0 2rem;
@@ -606,18 +1046,50 @@
             transform: translateY(-3px);
         }
 
+        /* ── Responsive ── */
         @media (max-width: 992px) {
-            h1 { font-size: 2.8rem; }
-            .hero-grid { flex-direction: column-reverse; text-align: center; }
-            .hero-content { text-align: center; }
-            .hero-description { margin-left: auto; margin-right: auto; }
-            .cta-group { justify-content: center; }
-            .contact-grid { grid-template-columns: 1fr; }
+            h1 {
+                font-size: 2.8rem;
+            }
+            .hero-grid {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .hero-content {
+                text-align: center;
+            }
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .cta-group {
+                justify-content: center;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .flagship-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .flagship-card {
+                padding: 2rem 1.8rem;
+            }
+            .flagship-title {
+                font-size: 1.8rem;
+            }
+            .flagship-visual {
+                min-height: 260px;
+            }
         }
 
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
+            .nav-links {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
             .nav-links.active {
                 display: flex;
                 flex-direction: column;
@@ -631,12 +1103,114 @@
                 text-align: center;
                 border-top: 1px solid rgba(212, 175, 55, 0.2);
             }
-            .profile-ring { width: 260px; height: 260px; }
-            .skills-grid { grid-template-columns: 1fr; }
-            .achievement-flex { flex-direction: column; align-items: center; text-align: center; }
-            .highlight-item { justify-content: center; }
+            .profile-ring {
+                width: 260px;
+                height: 260px;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .achievement-flex {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .highlight-item {
+                justify-content: center;
+            }
+            .flagship-card {
+                padding: 1.5rem 1.2rem;
+            }
+            .flagship-title {
+                font-size: 1.5rem;
+            }
+            .flagship-features {
+                gap: 0.5rem;
+            }
+            .flagship-feature {
+                font-size: 0.85rem;
+            }
+            .flagship-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .flagship-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .flagship-visual {
+                min-height: 220px;
+            }
+            .mockup-kpis {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 6px;
+            }
+            .mockup-kpi {
+                padding: 8px 10px;
+            }
+            .mockup-kpi .value {
+                font-size: 0.9rem;
+            }
+            .mockup-heat {
+                gap: 3px;
+            }
+            .mockup-bars {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            .flagship-tech .tag {
+                font-size: 0.65rem;
+                padding: 4px 12px;
+            }
+            .flagship-badge {
+                font-size: 0.65rem;
+                padding: 4px 14px;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .flagship-section {
+                margin: 1rem 0 2.5rem;
+            }
         }
 
+        @media (max-width: 480px) {
+            .flagship-card {
+                padding: 1.2rem 0.8rem;
+            }
+            .flagship-title {
+                font-size: 1.3rem;
+            }
+            .flagship-tagline {
+                font-size: 0.9rem;
+            }
+            .flagship-feature {
+                font-size: 0.8rem;
+                gap: 10px;
+            }
+            .mockup-kpis {
+                grid-template-columns: 1fr 1fr;
+            }
+            .mockup-kpi:last-child {
+                grid-column: span 2;
+            }
+            .mockup-body {
+                padding: 14px 14px 18px;
+                gap: 10px;
+            }
+            .mockup-header {
+                padding: 10px 14px;
+            }
+            .flagship-visual {
+                min-height: 180px;
+            }
+            .flagship-actions .btn {
+                padding: 11px 20px;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* ── Fade in ── */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -647,232 +1221,413 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* ── Scrollbar ── */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 12px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold-light);
+        }
     </style>
 </head>
 <body>
 
-<nav id="navbar">
-    <div class="container nav-container">
-        <a href="#home" class="logo"><i class="fas fa-shield-alt"></i> Ouma Haningtone</a>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Expertise</a></li>
-            <li><a href="#achievements">Recognition</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Work</a></li>
-            <li><a href="#contact">Connect</a></li>
-        </ul>
-    </div>
-</nav>
-
-<section id="home" class="hero">
-    <div class="container hero-grid">
-        <div class="hero-content">
-            <div class="hero-badge fade-in">
-                <i class="fas fa-shield-alt"></i> Acknowledgment by KE-CIRT/CC · Available Worldwide
-            </div>
-            <h1 class="fade-in">Bridging <span style="color: var(--gold);">Growth</span> & <span style="color: var(--gold);">Security</span></h1>
-            <p class="hero-description fade-in">I automate lead generation, secure digital workspaces, and uncover network risks. Technical VA + Security Researcher — one role, two superpowers.</p>
-            <div class="cta-group fade-in">
-                <a href="#contact" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Let's see if we're a fit</a>
-                <a href="#projects" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> See live work</a>
-            </div>
+    <!-- ─── NAV ─── -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo"><i class="fas fa-shield-alt"></i> Ouma Haningtone</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Expertise</a></li>
+                <li><a href="#achievements">Recognition</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact">Connect</a></li>
+            </ul>
         </div>
-        <div class="hero-image fade-in">
-            <div class="profile-ring">
-                <div class="profile-inner">
-                    <i class="fas fa-user-astronaut"></i>
+    </nav>
+
+    <!-- ─── HERO ─── -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge fade-in">
+                    <i class="fas fa-shield-alt"></i> Acknowledgment by KE-CIRT/CC · Available Worldwide
+                </div>
+                <h1 class="fade-in">Bridging <span style="color: var(--gold);">Growth</span> &amp; <span style="color: var(--gold);">Security</span></h1>
+                <p class="hero-description fade-in">I automate lead generation, secure digital workspaces, and uncover network risks. Technical VA + Security Researcher — one role, two superpowers.</p>
+                <div class="cta-group fade-in">
+                    <a href="#contact" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Let's see if we're a fit</a>
+                    <a href="#projects" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> See live work</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <div class="profile-ring">
+                    <div class="profile-inner">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="skills">
-    <div class="container">
-        <div class="section-title">
-            <h2>What I deliver</h2>
-            <p>Growth automation + security protection = peace of mind</p>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-robot"></i></div>
-                <h3>Lead Generation Automation</h3>
-                <p>Website Scraping, Python scripts that find your next 100 clients while you sleep. Apollo.io, LinkedIn automation, and custom scrapers.</p>
-                <div class="skill-tags"><span class="tag">Python</span><span class="tag">Apollo.io</span><span class="tag">Web Scraping</span>
-                <span class="tag">CRM Integration</span><span class="tag">Prospeo</span> <span class="tag">Gmass</span></div>
+    <!-- ─── SKILLS ─── -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>What I deliver</h2>
+                <p>Growth automation + security protection = peace of mind</p>
             </div>
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-shield-hog"></i></div>
-                <h3>Security Research & OSINT</h3>
-                <p>Identify vulnerabilities before bad actors do. Ethical disclosure, network scanning, and asset auditing.</p>
-                <div class="skill-tags"><span class="tag">Nessus</span><span class="tag">Python-Nmap</span><span class="tag">Vulnerability Assessment</span>
-                <span class="tag">KE-CIRT/CC</span><span class="tag">Shodan</span></div>
-            </div>
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-                <h3>Data Analytics & Dashboards</h3>
-                <p>Turn messy data into actionable insights. Tableau, Power BI, and Python visualizations that drive decisions.</p>
-                <div class="skill-tags"><span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">Pandas</span>
-                <span class="tag">Julius AI</span></div>
-            </div>
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-globe"></i></div>
-                <h3>Web Dev & Automation Tools</h3>
-                <p>Custom web apps, landing pages, AI Chart Bot and internal tools that solve real business problems.</p>
-                <div class="skill-tags"><span class="tag">Streamlit</span><span class="tag">HTML/CSS/JS</span><span class="tag">Python</span>
-                <span class="tag">Git</span></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="achievements">
-    <div class="container">
-        <div class="section-title">
-            <h2>Credibility in action</h2>
-            <p>Recognized for impact beyond code</p>
-        </div>
-        <div class="achievement-card fade-in">
-            <div class="achievement-flex">
-                <div class="achievement-icon"><i class="fas fa-bug"></i></div>
-                <div class="achievement-stats">
-                    <h3>National Cybersecurity Acknowledgment</h3>
-                    <div class="badge-list">
-                        <span class="badge"><i class="fas fa-check-circle"></i> KE-CIRT/CC</span>
-                        <span class="badge">Responsible Disclosure</span>
-                        <span class="badge">Ethical Research</span>
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Lead Generation Automation</h3>
+                    <p>Website Scraping, Python scripts that find your next 100 clients while you sleep. Apollo.io, LinkedIn automation, and custom scrapers.</p>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span><span class="tag">Apollo.io</span><span class="tag">Web Scraping</span>
+                        <span class="tag">CRM Integration</span><span class="tag">Prospeo</span><span class="tag">Gmass</span>
                     </div>
-                    <p>Identified and responsibly reported a critical infrastructure vulnerability through passive OSINT research. The finding was officially acknowledged by Kenya's National Computer Incident Response Team, leading to a security patch that strengthened national assets.</p>
-                    <div class="highlight-list">
-                        <div class="highlight-item"><i class="fas fa-shield-heart"></i> <span>Non-intrusive methodology aligned with global standards</span>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon"><i class="fas fa-shield-hog"></i></div>
+                    <h3>Security Research &amp; OSINT</h3>
+                    <p>Identify vulnerabilities before bad actors do. Ethical disclosure, network scanning, and asset auditing.</p>
+                    <div class="skill-tags">
+                        <span class="tag">Nessus</span><span class="tag">Python-Nmap</span><span class="tag">Vulnerability Assessment</span>
+                        <span class="tag">KE-CIRT/CC</span><span class="tag">Shodan</span>
+                    </div>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Data Analytics &amp; Dashboards</h3>
+                    <p>Turn messy data into actionable insights. Tableau, Power BI, and Python visualizations that drive decisions.</p>
+                    <div class="skill-tags">
+                        <span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">Pandas</span>
+                        <span class="tag">Julius AI</span>
+                    </div>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Web Dev &amp; Automation Tools</h3>
+                    <p>Custom web apps, landing pages, AI Chart Bot and internal tools that solve real business problems.</p>
+                    <div class="skill-tags">
+                        <span class="tag">Streamlit</span><span class="tag">HTML/CSS/JS</span><span class="tag">Python</span>
+                        <span class="tag">Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── ACHIEVEMENTS ─── -->
+    <section id="achievements">
+        <div class="container">
+            <div class="section-title">
+                <h2>Credibility in action</h2>
+                <p>Recognized for impact beyond code</p>
+            </div>
+            <div class="achievement-card fade-in">
+                <div class="achievement-flex">
+                    <div class="achievement-icon"><i class="fas fa-bug"></i></div>
+                    <div class="achievement-stats">
+                        <h3>National Cybersecurity Acknowledgment</h3>
+                        <div class="badge-list">
+                            <span class="badge"><i class="fas fa-check-circle"></i> KE-CIRT/CC</span>
+                            <span class="badge">Responsible Disclosure</span>
+                            <span class="badge">Ethical Research</span>
                         </div>
-                        <div class="highlight-item"><i class="fas fa-trophy"></i> <span>Official remediation confirmation from KE-CIRT/CC</span></div>
-                        <div class="highlight-item"><i class="fas fa-handshake"></i> <span>Demonstrates proactive risk management for partners</span></div>
+                        <p>Identified and responsibly reported a critical infrastructure vulnerability through passive OSINT research. The finding was officially acknowledged by Kenya's National Computer Incident Response Team, leading to a security patch that strengthened national assets.</p>
+                        <div class="highlight-list">
+                            <div class="highlight-item"><i class="fas fa-shield-heart"></i> <span>Non-intrusive methodology aligned with global standards</span></div>
+                            <div class="highlight-item"><i class="fas fa-trophy"></i> <span>Official remediation confirmation from KE-CIRT/CC</span></div>
+                            <div class="highlight-item"><i class="fas fa-handshake"></i> <span>Demonstrates proactive risk management for partners</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="achievement-card fade-in" style="margin-top: 2rem;">
+                <div class="achievement-flex">
+                    <div class="achievement-icon"><i class="fas fa-network-wired"></i></div>
+                    <div class="achievement-stats">
+                        <h3>Hands‑on Vulnerability Management</h3>
+                        <div class="badge-list">
+                            <span class="badge">Nessus Essentials</span>
+                            <span class="badge">Python‑Nmap Automation</span>
+                            <span class="badge">Credentialed Scanning</span>
+                        </div>
+                        <p>Conducted full vulnerability assessments on network gateways (routers) and local assets. Successfully identified and documented 22+ security findings, from open ports to service enumeration, and built an automated Python‑Nmap scanner that reduces manual checks from 2 hours to under 15 minutes.</p>
+                        <div class="highlight-list">
+                            <div class="highlight-item"><i class="fas fa-chart-line"></i> <span>Risk prioritization using CVSS / VPR frameworks</span></div>
+                            <div class="highlight-item"><i class="fas fa-file-alt"></i> <span>Automated CSV reporting for stakeholder review</span></div>
+                            <div class="highlight-item"><i class="fas fa-microchip"></i> <span>Deep understanding of credentialed vs. non‑credentialed scans</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- New: Vulnerability Assessment Recognition Card -->
-        <div class="achievement-card fade-in" style="margin-top: 2rem;">
-            <div class="achievement-flex">
-                <div class="achievement-icon"><i class="fas fa-network-wired"></i></div>
-                <div class="achievement-stats">
-                    <h3>Hands‑on Vulnerability Management</h3>
-                    <div class="badge-list">
-                        <span class="badge">Nessus Essentials</span>
-                        <span class="badge">Python‑Nmap Automation</span>
-                        <span class="badge">Credentialed Scanning</span>
-                    </div>
-                    <p>Conducted full vulnerability assessments on network gateways (routers) and local assets. Successfully identified and documented 22+ security findings, from open ports to service enumeration, and built an automated Python‑Nmap scanner that reduces manual checks from 2 hours to under 15 minutes.</p>
-                    <div class="highlight-list">
-                        <div class="highlight-item"><i class="fas fa-chart-line"></i> <span>Risk prioritization using CVSS / VPR frameworks</span></div>
-                        <div class="highlight-item"><i class="fas fa-file-alt"></i> <span>Automated CSV reporting for stakeholder review</span></div>
-                        <div class="highlight-item"><i class="fas fa-microchip"></i> <span>Deep understanding of credentialed vs. non‑credentialed scans</span></div>
+    </section>
+
+    <!-- ─── EXPERIENCE ─── -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Recent track record</h2>
+                <p>Real-world results from diverse roles</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">Apr 2026 – uptime</div>
+                    <h3>Technical lead Gen &amp; Email Marketing</h3>
+                    <p>Tandao Africa  ·</p>
+                    <p>Orchestrated referral logistics and confidential case coordination. Improved response tracking by 30% with systematic follow-up protocols.</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">Apr 2025 – Present 2026</div>
+                    <h3>Field Operations and Target Demographic Acquisition</h3>
+                    <p>Center for the Study of Adolescent Health ·</p>
+                    <p>Orchestrated referral logistics and confidential case coordination. Improved response tracking by 30% with systematic follow-up protocols.</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">Jan 2024 – Jul 2025</div>
+                    <h3>Computer Maintenance &amp; Support Lead</h3>
+                    <p>ICS College, Kisumu</p>
+                    <p>Maintained LAN infrastructure for 500+ concurrent users, ensured 100% uptime for online examination systems, and reduced hardware downtime by 40%.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── PROJECTS ─── -->
+    <section id="projects">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Featured solutions</h2>
+                <p>Live projects that solve real problems</p>
+            </div>
+
+            <!-- ════════════════════════════════════════════════
+            ★  FLAGSHIP PROJECT — GRC DASHBOARD
+            ════════════════════════════════════════════════ -->
+            <div class="flagship-section fade-in">
+                <div class="flagship-card">
+                    <div class="flagship-grid">
+
+                        <!-- ── Left: Content ── -->
+                        <div class="flagship-content">
+                            <div class="flagship-badge">
+                                <i class="fas fa-crown"></i> Flagship Project
+                            </div>
+                            <h2 class="flagship-title">
+                                Enterprise <span>GRC</span> &amp; Compliance Automation Dashboard
+                            </h2>
+                            <p class="flagship-tagline">
+                                Automated Cybersecurity Audit Readiness &amp; Risk Engineering
+                            </p>
+
+                            <div class="flagship-features">
+                                <div class="flagship-feature">
+                                    <i class="fas fa-database"></i>
+                                    <div><strong>Data Ingestion Pipeline:</strong> Automated parsing of infrastructure vulnerability scans.</div>
+                                </div>
+                                <div class="flagship-feature">
+                                    <i class="fas fa-sitemap"></i>
+                                    <div><strong>Automated Framework Mapping:</strong> Direct mapping of technical flaws to ISO 27001:2022 and SOC 2 controls.</div>
+                                </div>
+                                <div class="flagship-feature">
+                                    <i class="fas fa-chart-pie"></i>
+                                    <div><strong>Dynamic Visualizations:</strong> Core components include an interactive 5×5 Risk Heat Matrix and compliance gap analytics.</div>
+                                </div>
+                                <div class="flagship-feature">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <div><strong>Executive Reporting:</strong> One-click automated corporate PDF report compiler.</div>
+                                </div>
+                            </div>
+
+                            <div class="flagship-tech">
+                                <span class="tag">Python</span>
+                                <span class="tag">Streamlit</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">Plotly</span>
+                                <span class="tag">GRC Frameworks (ISO 27001 / SOC 2)</span>
+                            </div>
+
+                            <div class="flagship-actions">
+                                <a href="https://enterprise-grc-risk-dashboard-m2eddnkwq4undgst4x7ew6.streamlit.app/"
+                                class="btn btn-primary"
+                                target="_blank"
+                                rel="noopener">
+                                <i class="fas fa-external-link-alt"></i> Launch Live App
+                            </a>
+                            <a href="https://github.com/hansec-technology-dot"
+                            class="btn btn-secondary"
+                            target="_blank"
+                            rel="noopener">
+                            <i class="fab fa-github"></i> View Source Code
+                        </a>
                     </div>
                 </div>
+
+                <!-- ── Right: Visual Mockup ── -->
+                <div class="flagship-visual">
+                    <div class="flagship-mockup" id="grcMockup">
+                        <!-- The image will be shown if it exists; otherwise CSS mockup is visible -->
+                        <img
+                        class="mockup-image-placeholder"
+                        src="Enterprise GRC Risk Dashboard.png"
+                        alt="Enterprise GRC Risk Dashboard"
+                        onerror="this.style.display='none'; document.getElementById('grcMockup').classList.remove('has-image');"
+                        onload="this.style.display='block'; document.getElementById('grcMockup').classList.add('has-image');"
+                        />
+                        <!-- ── CSS Mockup (fallback) ── -->
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span class="mockup-dot"></span>
+                                <span class="mockup-dot"></span>
+                                <span class="mockup-dot"></span>
+                            </div>
+                            <span class="mockup-title"><i class="fas fa-shield-alt"></i> GRC Risk Dashboard</span>
+                            <span style="font-size:0.6rem; color:var(--gray-500);">● Live</span>
+                        </div>
+                        <div class="mockup-body">
+                            <!-- KPIs -->
+                            <div class="mockup-kpis">
+                                <div class="mockup-kpi">
+                                    <div class="label">Risk Score</div>
+                                    <div class="value gold">42</div>
+                                </div>
+                                <div class="mockup-kpi">
+                                    <div class="label">Compliance</div>
+                                    <div class="value green">86%</div>
+                                </div>
+                                <div class="mockup-kpi">
+                                    <div class="label">Open Findings</div>
+                                    <div class="value orange">17</div>
+                                </div>
+                            </div>
+                            <!-- Heat Matrix 5×5 -->
+                            <div class="mockup-heat">
+                                <div class="mockup-heat-cell level-2"></div>
+                                <div class="mockup-heat-cell level-1"></div>
+                                <div class="mockup-heat-cell level-3"></div>
+                                <div class="mockup-heat-cell level-0"></div>
+                                <div class="mockup-heat-cell level-2"></div>
+                                <div class="mockup-heat-cell level-0"></div>
+                                <div class="mockup-heat-cell level-4"></div>
+                                <div class="mockup-heat-cell level-2"></div>
+                                <div class="mockup-heat-cell level-1"></div>
+                                <div class="mockup-heat-cell level-3"></div>
+                                <div class="mockup-heat-cell level-1"></div>
+                                <div class="mockup-heat-cell level-2"></div>
+                                <div class="mockup-heat-cell level-0"></div>
+                                <div class="mockup-heat-cell level-5"></div>
+                                <div class="mockup-heat-cell level-2"></div>
+                                <div class="mockup-heat-cell level-3"></div>
+                                <div class="mockup-heat-cell level-1"></div>
+                                <div class="mockup-heat-cell level-2"></div>
+                                <div class="mockup-heat-cell level-0"></div>
+                                <div class="mockup-heat-cell level-3"></div>
+                                <div class="mockup-heat-cell level-0"></div>
+                                <div class="mockup-heat-cell level-2"></div>
+                                <div class="mockup-heat-cell level-4"></div>
+                                <div class="mockup-heat-cell level-1"></div>
+                                <div class="mockup-heat-cell level-2"></div>
+                            </div>
+                            <!-- Compliance bars -->
+                            <div class="mockup-bars">
+                                <div class="mockup-bar">
+                                    <div class="bar-label">
+                                        <span>ISO 27001:2022</span>
+                                        <span>86%</span>
+                                    </div>
+                                    <div class="bar-track">
+                                        <div class="bar-fill iso"></div>
+                                    </div>
+                                </div>
+                                <div class="mockup-bar">
+                                    <div class="bar-label">
+                                        <span>SOC 2</span>
+                                        <span>72%</span>
+                                    </div>
+                                    <div class="bar-track">
+                                        <div class="bar-fill soc"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-</section>
+    <!-- ════════════════════════════════════════════════ -->
 
-<section id="experience">
-    <div class="container">
-        <div class="section-title">
-            <h2>Recent track record</h2>
-            <p>Real-world results from diverse roles</p>
+    <!-- ── Other Projects ── -->
+    <div class="projects-grid">
+        <div class="project-card fade-in">
+            <div class="project-img"><i class="fas fa-shield-virus"></i></div>
+            <div class="project-content">
+                <h3>Python-Nmap Network Scanner</h3>
+                <p>Automated vulnerability scanner that performs full port discovery, service version detection, and exports CSV reports. Reduces manual checks from 2 hours to <strong>15 minutes</strong>. Built for ethical network audits.</p>
+                <div class="skill-tags" style="margin-bottom:0.8rem;">
+                    <span class="tag">Python</span><span class="tag">Nmap</span><span class="tag">CSV Automation</span><span class="tag">Cybersecurity</span>
+                </div>
+                <a href="#" class="project-link" target="_blank" rel="noopener">Demo / GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
-        <div class="timeline">
-            <div class="timeline-item fade-in">
-                <div class="timeline-date">Apr 2026 – uptime</div>
-                <h3>Technical lead Gen & Email Marketing</h3>
-                <p>Tandao Africa  ·</p>
-                <p>Orchestrated referral logistics and confidential case coordination. Improved response tracking by 30% with systematic follow-up protocols.
-                </p>
+        <div class="project-card fade-in">
+            <div class="project-img"><i class="fas fa-shield-alt"></i></div>
+            <div class="project-content">
+                <h3>HR Data Safety Checker</h3>
+                <p>Web app that helps HR consultants assess SME data security risks in 2 minutes. Generates professional PDF reports with safety scores and actionable recommendations. Built with Python Streamlit.</p>
+                <div class="skill-tags" style="margin-bottom:0.8rem;">
+                    <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">HR Tech</span><span class="tag">Data Protection</span>
+                </div>
+                <a href="https://hr-safety-checker-vycabpj9edshqluucihwrt.streamlit.app/" class="project-link" target="_blank" rel="noopener">Live demo <i class="fas fa-arrow-right"></i></a>
             </div>
-			
-			<div class="timeline-item fade-in">
-                <div class="timeline-date">Apr 2025 – Present 2026</div>
-                <h3>Field Operations and Target Demographic Acquisitionr</h3>
-                <p>Center for the Study of Adolescent Health ·</p>
-                <p>Orchestrated referral logistics and confidential case coordination. Improved response tracking by 30% with systematic follow-up protocols.
-                </p>
+        </div>
+        <div class="project-card fade-in">
+            <div class="project-img"><i class="fas fa-chart-line"></i></div>
+            <div class="project-content">
+                <h3>Data Analytics &amp; Dashboards</h3>
+                <p>Interactive Tableau dashboard that helped a retail client uncover profit leakages and optimize discount strategies, resulting in 18% better margin visibility.</p>
+                <a href="https://hansec-technology-dot.github.io/Corporate-Data-Analytics-Dashboards/" class="project-link" target="_blank" rel="noopener">Live demo <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="timeline-item fade-in">
-                <div class="timeline-date">Jan 2024 – Jul 2025</div>
-                <h3>Computer Maintenance & Support Lead</h3>
-                <p>ICS College, Kisumu</p>
-                <p>Maintained LAN infrastructure for 500+ concurrent users, ensured 100% uptime for online examination systems, and reduced hardware downtime by 40%.</p>
+        </div>
+        <div class="project-card fade-in">
+            <div class="project-img"><i class="fas fa-robot"></i></div>
+            <div class="project-content">
+                <h3>AI-Powered Web App Dev</h3>
+                <p>Landing page with smart Chart Bot and automated PDF data, terminology extraction. Reduced lookup time by 60% in trials.</p>
+                <a href="https://hansec-technology-dot.github.io/Landing_pages/" class="project-link" target="_blank" rel="noopener">View case study <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="project-card fade-in">
+            <div class="project-img"><i class="fas fa-briefcase"></i></div>
+            <div class="project-content">
+                <h3>Technical VA Operations Hub</h3>
+                <p>Centralized portfolio demonstrating lead generation automation, CRM integration, and calendar management built for efficiency focused founders.</p>
+                <a href="https://hansec-technology-dot.github.io/Technical-VA-Automation-Tools/" class="project-link" target="_blank" rel="noopener">Live preview <i class="fas fa-external-link-alt"></i></a>
             </div>
         </div>
     </div>
+
+</div>
 </section>
 
-<section id="projects">
-    <div class="container">
-        <div class="section-title">
-            <h2>Featured solutions</h2>
-            <p>Live projects that solve real problems</p>
-        </div>
-        <div class="projects-grid">
-            <!-- NEW: Vulnerability Scanner Project -->
-            <div class="project-card fade-in">
-                <div class="project-img"><i class="fas fa-shield-virus"></i></div>
-                <div class="project-content">
-                    <h3>Python-Nmap Network Scanner</h3>
-                    <p>Automated vulnerability scanner that performs full port discovery, service version detection, and exports CSV reports. Reduces manual checks from 2 hours to <strong>15 minutes</strong>. Built for ethical network audits.</p>
-                    <div class="skill-tags" style="margin-bottom: 0.8rem;">
-                        <span class="tag">Python</span>
-                        <span class="tag">Nmap</span>
-                        <span class="tag">CSV Automation</span>
-                        <span class="tag">Cybersecurity</span>
-                    </div>
-                    <a href="#" class="project-link" target="_blank" rel="noopener">Demo / GitHub <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-img"><i class="fas fa-shield-alt"></i></div>
-                <div class="project-content">
-                    <h3>HR Data Safety Checker</h3>
-                    <p>Web app that helps HR consultants assess SME data security risks in 2 minutes. Generates professional PDF reports with safety scores and actionable recommendations. Built with Python Streamlit.</p>
-                    <div class="skill-tags" style="margin-bottom: 0.8rem;">
-                        <span class="tag">Python</span>
-                        <span class="tag">Streamlit</span>
-                        <span class="tag">HR Tech</span>
-                        <span class="tag">Data Protection</span>
-                    </div>
-                    <a href="https://hr-safety-checker-vycabpj9edshqluucihwrt.streamlit.app/" class="project-link" target="_blank" rel="noopener">Live demo <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-img"><i class="fas fa-chart-line"></i></div>
-                <div class="project-content">
-                    <h3>Data Analytics & Dashboards</h3>
-                    <p>Interactive Tableau dashboard that helped a retail client uncover profit leakages and optimize discount strategies, resulting in 18% better margin visibility.</p>
-                    <a href="https://hansec-technology-dot.github.io/Corporate-Data-Analytics-Dashboards/" class="project-link" target="_blank" rel="noopener">Live demo <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-img"><i class="fas fa-robot"></i></div>
-                <div class="project-content">
-                    <h3>AI-Powered Web App Dev</h3>
-                    <p>Landing page with smart Chart Bot  and automated PDF data, terminology extraction. Reduced lookup time by 60% in trials.</p>
-                    <a href="https://hansec-technology-dot.github.io/Landing_pages/" class="project-link" target="_blank" rel="noopener">View case study <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-img"><i class="fas fa-briefcase"></i></div>
-                <div class="project-content">
-                    <h3>Technical VA Operations Hub</h3>
-                    <p>Centralized portfolio demonstrating lead generation automation, CRM integration, and calendar management built for efficiency focused founders.</p>
-                    <a href="https://hansec-technology-dot.github.io/Technical-VA-Automation-Tools/" class="project-link" target="_blank" rel="noopener">Live preview <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
+<!-- ─── CONTACT ─── -->
 <section id="contact">
     <div class="container">
         <div class="section-title">
@@ -899,7 +1654,6 @@
                 </div>
             </div>
 
-            <!-- CONTACT FORM – using Formspree -->
             <div class="contact-form fade-in">
                 <form id="contactForm" action="https://formspree.io/f/xbdenvdw" method="POST">
                     <div class="form-group">
@@ -925,6 +1679,7 @@
     </div>
 </section>
 
+<!-- ─── FOOTER ─── -->
 <footer>
     <div class="container">
         <div class="social-links">
@@ -933,18 +1688,20 @@
             <a href="https://github.com/hansec-technology-dot" class="social-link" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
             <a href="tel:+254743489272" class="social-link" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
         </div>
-        <p class="copyright">© 2026 Ouma Haningtone — Technical VA & Security Researcher<br>Bridging growth automation with data protection | Vulnerability Assessment & OSINT</p>
+        <p class="copyright">© 2026 Ouma Haningtone — Technical VA &amp; Security Researcher<br>Bridging growth automation with data protection | Vulnerability Assessment &amp; OSINT</p>
     </div>
 </footer>
 
+<!-- ─── SCRIPTS ─── -->
 <script>
+    // ── Nav scroll ──
     const navbar = document.getElementById('navbar');
     const mobileBtn = document.getElementById('mobileMenuBtn');
     const navLinksEl = document.getElementById('navLinks');
     const fadeElements = document.querySelectorAll('.fade-in');
-    
+
     window.addEventListener('scroll', () => {
-        if(window.scrollY > 50) {
+        if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
@@ -952,60 +1709,63 @@
         updateActiveLink();
         checkFade();
     });
-    
-    if(mobileBtn) {
+
+    // ── Mobile menu ──
+    if (mobileBtn) {
         mobileBtn.addEventListener('click', () => {
             navLinksEl.classList.toggle('active');
             const icon = mobileBtn.querySelector('i');
-            if(icon) {
+            if (icon) {
                 icon.className = navLinksEl.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
             }
         });
     }
-    
+
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navLinksEl?.classList.remove('active');
-            if(mobileBtn) {
+            if (mobileBtn) {
                 const icon = mobileBtn.querySelector('i');
-                if(icon) icon.className = 'fas fa-bars';
+                if (icon) icon.className = 'fas fa-bars';
             }
         });
     });
-    
+
+    // ── Fade in ──
     function checkFade() {
         fadeElements.forEach(el => {
             const top = el.getBoundingClientRect().top;
-            if(top < window.innerHeight - 100) {
+            if (top < window.innerHeight - 100) {
                 el.classList.add('visible');
             }
         });
     }
-    
+
     function updateActiveLink() {
         const sections = document.querySelectorAll('section[id]');
         let currentId = '';
         sections.forEach(section => {
             const top = section.offsetTop - 150;
-            if(scrollY >= top) {
+            if (scrollY >= top) {
                 currentId = section.getAttribute('id');
             }
         });
         document.querySelectorAll('.nav-links a').forEach(a => {
             a.classList.remove('active');
             const href = a.getAttribute('href');
-            if(href === `#${currentId}`) {
+            if (href === `#${currentId}`) {
                 a.classList.add('active');
             }
         });
     }
-    
+
+    // ── Smooth anchor scroll ──
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
-            if(targetId === '#') return;
+            if (targetId === '#') return;
             const targetElement = document.querySelector(targetId);
-            if(targetElement) {
+            if (targetElement) {
                 e.preventDefault();
                 window.scrollTo({
                     top: targetElement.offsetTop - 80,
@@ -1014,39 +1774,54 @@
             }
         });
     });
-    
-    // Handle form submission – show success message on successful send
+
+    // ── Contact form (Formspree fetch) ──
     const form = document.getElementById('contactForm');
     const successDiv = document.getElementById('formSuccess');
     if (form) {
         form.addEventListener('submit', function(e) {
-            // We let Formspree handle the POST; we show success only after it loads
-            // We can show a loading state, but simplest: let Formspree redirect or show its own page.
-            // Instead, we'll intercept and show success if fetch is used.
-            // However, Formspree redirects to a default page. To keep it on the page, we can use fetch.
             e.preventDefault();
             const formData = new FormData(form);
             fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    successDiv.style.display = 'block';
-                    form.querySelector('.btn-submit').style.display = 'none';
-                    form.querySelectorAll('.form-group').forEach(g => g.style.display = 'none');
-                    // Optionally reset
-                } else {
-                    alert('Oops! Something went wrong. Please try again.');
-                }
-            }).catch(error => {
-                alert('Network error. Please check your connection and try again.');
-            });
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        successDiv.style.display = 'block';
+                        form.querySelector('.btn-submit').style.display = 'none';
+                        form.querySelectorAll('.form-group').forEach(g => g.style.display = 'none');
+                    } else {
+                        alert('Oops! Something went wrong. Please try again.');
+                    }
+                })
+                .catch(() => {
+                    alert('Network error. Please check your connection and try again.');
+                });
         });
     }
-    
+
+    // ── Init ──
     checkFade();
     updateActiveLink();
+
+    // ── GRC Mockup: if image loads, hide CSS mockup ──
+    // (handled inline via onload/onerror on the img)
+    // Also ensure the mockup shows the image if it exists
+    (function() {
+        const mockup = document.getElementById('grcMockup');
+        const img = mockup?.querySelector('img.mockup-image-placeholder');
+        if (img) {
+            // If image already loaded (cached), trigger onload manually
+            if (img.complete && img.naturalWidth > 0) {
+                img.style.display = 'block';
+                mockup.classList.add('has-image');
+            }
+            // If image fails, it will be hidden by onerror
+        }
+    })();
 </script>
+
 </body>
 </html>
